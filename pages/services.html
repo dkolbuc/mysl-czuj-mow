@@ -35,129 +35,158 @@
     <!-- ══════════════════════════════════════════════
          PSYCHOLOGIA
     ══════════════════════════════════════════════ -->
-    <section class="section service-section" id="psychologia" aria-labelledby="psych-heading">
+    <section class="svc-section svc-section--psych" id="psychologia" aria-labelledby="psych-heading">
       <div class="container">
-        <div class="reveal">
-          <div class="service-section__header">
-            <div class="service-section__icon">🧠</div>
-            <div>
-              <span class="section-header__label">Psycholog</span>
-              <h2 id="psych-heading" style="margin:0;">Terapia psychologiczna</h2>
+        <div class="svc-layout reveal">
+
+          <!-- Left: specialist sidebar -->
+          <aside class="svc-aside">
+            <div class="svc-icon svc-icon--psych">
+              <!-- brain / psychology -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+            </div>
+            <p class="svc-aside__label">Psycholog</p>
+            <h2 id="psych-heading" class="svc-aside__title">Terapia psychologiczna</h2>
+            <div class="svc-specialist-card svc-specialist-card--psych">
+              <div class="svc-specialist-card__name">Kinga Niewójt-Sasak</div>
+              <div class="svc-specialist-card__role">Psycholog kliniczny</div>
+            </div>
+            <div class="svc-aside__actions">
+              <a href="/pages/contact.html" class="btn btn--primary">Umów wizytę</a>
+              <a href="/pages/team.html#kinga" class="btn btn--ghost">O specjaliście</a>
+            </div>
+          </aside>
+
+          <!-- Right: service content -->
+          <div class="svc-content">
+            <p class="svc-lead">
+              Kinga Niewójt-Sasak – dyplomowany psycholog – oferuje kompleksowe wsparcie psychologiczne dla dzieci, młodzieży i ich rodzin. Pracuje terapeutycznie w podejściu systemowym, łącząc elementy różnych nurtów psychologicznych.
+            </p>
+
+            <div class="svc-block">
+              <h3 class="svc-block__title">Zakres usług</h3>
+              <ul class="svc-list">
+                <li>Konsultacja psychologiczna obejmująca wywiad z pacjentem, analizę zgłaszanego problemu, wskazówki dla rodziców i propozycje odpowiednich metod terapeutycznych.</li>
+                <li>Terapia indywidualna dzieci i młodzieży, dostosowana do wieku i potrzeb pacjenta.</li>
+                <li>Konsultacje i wsparcie dla rodziców.</li>
+              </ul>
+            </div>
+
+            <div class="svc-block">
+              <h3 class="svc-block__title">Obszary pomocy</h3>
+              <div class="svc-tags">
+                <span class="svc-tag">Problemy z zachowaniem</span>
+                <span class="svc-tag">Trudności w relacjach rówieśniczych i koleżeńskich</span>
+                <span class="svc-tag">Zaburzenia lękowe i depresyjne</span>
+                <span class="svc-tag">Zaburzenia obsesyjno-kompulsyjne</span>
+                <span class="svc-tag">Spektrum autyzmu i ADHD</span>
+                <span class="svc-tag">Problemy z koncentracją uwagi</span>
+                <span class="svc-tag">Spadek motywacji</span>
+                <span class="svc-tag">Radzenie sobie ze stresem i trudnymi emocjami</span>
+              </div>
             </div>
           </div>
-          <p class="service-section__lead">
-            Kinga Niewójt-Sasak – dyplomowany psycholog – oferuje kompleksowe wsparcie psychologiczne dla dzieci, młodzieży i ich rodzin.
-          </p>
-        </div>
 
-        <div style="display:grid; grid-template-columns:1fr; gap:2rem;" class="reveal reveal-delay-1">
-          <div>
-            <h3 style="margin-bottom:1rem;">Zakres usług</h3>
-            <ul class="spec-list">
-              <li>Konsultacja psychologiczna obejmująca wywiad z pacjentem, analizę zgłaszanego problemu, wskazówki dla rodziców i propozycje odpowiednich metod terapeutycznych.</li>
-              <li>Terapia indywidualna dzieci i młodzieży, dostosowana do wieku i potrzeb pacjenta.</li>
-              <li>Konsultacje i wsparcie dla rodziców.</li>
-            </ul>
-
-            <h3 style="margin:1.75rem 0 1rem;">Obszary pomocy</h3>
-            <ul class="spec-list">
-              <li>Problemy z zachowaniem</li>
-              <li>Trudności w relacjach rówieśniczych i koleżeńskich</li>
-              <li>Zaburzenia lękowe, depresyjne, obsesyjno-kompulsyjne</li>
-              <li>Zaburzenia ze spektrum autyzmu i ADHD</li>
-              <li>Problemy z koncentracją uwagi i spadkiem motywacji</li>
-              <li>Radzenie sobie ze stresem i trudnymi emocjami</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="reveal reveal-delay-2" style="margin-top:2.5rem;">
-          <a href="/pages/team.html#kinga" class="btn btn--ghost" style="margin-right:1rem;">O psychologu</a>
-          <a href="/pages/contact.html" class="btn btn--primary">Umów konsultację</a>
         </div>
       </div>
     </section>
-
-    <hr class="divider" />
 
     <!-- ══════════════════════════════════════════════
          LOGOPEDIA
     ══════════════════════════════════════════════ -->
-    <section class="section section--alt service-section" id="logopedia" aria-labelledby="logo-heading">
+    <section class="svc-section svc-section--logo" id="logopedia" aria-labelledby="logo-heading">
       <div class="container">
-        <div class="reveal">
-          <div class="service-section__header">
-            <div class="service-section__icon">🗣️</div>
-            <div>
-              <span class="section-header__label">Logopeda · Neurologopeda</span>
-              <h2 id="logo-heading" style="margin:0;">Terapia neurologopedyczna</h2>
+        <div class="svc-layout svc-layout--reverse reveal">
+
+          <!-- Content first in source, visually right on desktop -->
+          <div class="svc-content">
+            <p class="svc-lead">
+              Renata Cuprych – doktor nauk humanistycznych, neurologopeda i trener głosu – prowadzi terapię mowy i języka dla dzieci, dorosłych i seniorów, łącząc podejście naukowe z wieloletnim doświadczeniem klinicznym.
+            </p>
+
+            <div class="svc-block">
+              <h3 class="svc-block__title">Zakres usług</h3>
+              <ul class="svc-list">
+                <li>Czynności profilaktyczne i terapeutyczne z elementami diagnozy różnicowej – dla dzieci z całościowymi zaburzeniami rozwoju psychomotorycznego, języka, komunikacji i mowy.</li>
+                <li>Terapia w zakresie dysfunkcji aparatu artykulacyjnego, fonacyjnego i oddechowego u dzieci i dorosłych.</li>
+                <li>Terapia utraconych bądź niewykształconych funkcji poznawczo-językowych.</li>
+                <li>Kształcenie głosu i terapia utraconych sprawności fonacyjnych.</li>
+                <li>Wsparcie gerontologiczne – wspomaganie funkcji poznawczo-językowych u osób starszych.</li>
+                <li>Współpraca z osobami z branży artystycznej: aktorami, wokalistami, performerami, dubbingowcami.</li>
+              </ul>
             </div>
           </div>
-          <p class="service-section__lead">
-            Renata Cuprych – doktor nauk humanistycznych, neurologopeda i trener głosu – prowadzi terapię mowy i języka dla dzieci, dorosłych i seniorów.
-          </p>
-        </div>
 
-        <div class="reveal reveal-delay-1">
-          <h3 style="margin-bottom:1rem;">Zakres usług</h3>
-          <ul class="spec-list">
-            <li>Czynności profilaktyczne i terapeutyczne z elementami diagnozy różnicowej – dla dzieci z całościowymi zaburzeniami rozwoju psychomotorycznego, języka, komunikacji i mowy.</li>
-            <li>Terapia w zakresie dysfunkcji aparatu artykulacyjnego, fonacyjnego i oddechowego u dzieci i dorosłych.</li>
-            <li>Terapia utraconych bądź niewykształconych funkcji poznawczo-językowych.</li>
-            <li>Kształcenie głosu i terapia utraconych sprawności fonacyjnych.</li>
-            <li>Wsparcie gerontologiczne – wspomaganie funkcji poznawczo-językowych u osób starszych.</li>
-            <li>Współpraca z osobami z branży artystycznej: aktorami, wokalistami, performerami, dubbingowcami.</li>
-          </ul>
-        </div>
+          <!-- Specialist sidebar -->
+          <aside class="svc-aside">
+            <div class="svc-icon svc-icon--logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="4.5"/><path d="M5.5 9.5Q8 11.5 10.5 9.5"/><path d="M8 12.5v5.5"/><path d="M15 9a3 3 0 0 1 0 6"/><path d="M18 7a6 6 0 0 1 0 10"/></svg>
+            </div>
+            <p class="svc-aside__label">Logopeda · Neurologopeda</p>
+            <h2 id="logo-heading" class="svc-aside__title">Terapia neurologopedyczna</h2>
+            <div class="svc-specialist-card svc-specialist-card--logo">
+              <div class="svc-specialist-card__name">Renata Cuprych</div>
+              <div class="svc-specialist-card__role">Doktor nauk humanistycznych, neurologopeda</div>
+            </div>
+            <div class="svc-aside__actions">
+              <a href="/pages/contact.html" class="btn btn--primary">Umów wizytę</a>
+              <a href="/pages/team.html#renata" class="btn btn--ghost">O specjaliście</a>
+            </div>
+          </aside>
 
-        <div class="reveal reveal-delay-2" style="margin-top:2.5rem;">
-          <a href="/pages/team.html#renata" class="btn btn--ghost" style="margin-right:1rem;">O neurologopedzie</a>
-          <a href="/pages/contact.html" class="btn btn--primary">Umów konsultację</a>
         </div>
       </div>
     </section>
 
-    <hr class="divider" />
-
     <!-- ══════════════════════════════════════════════
          FIZJOTERAPIA
     ══════════════════════════════════════════════ -->
-    <section class="section service-section" id="fizjoterapia" aria-labelledby="fizjo-heading">
+    <section class="svc-section svc-section--fizjo" id="fizjoterapia" aria-labelledby="fizjo-heading">
       <div class="container">
-        <div class="reveal">
-          <div class="service-section__header">
-            <div class="service-section__icon">🤲</div>
-            <div>
-              <span class="section-header__label">Fizjoterapeuta</span>
-              <h2 id="fizjo-heading" style="margin:0;">Fizjoterapia i terapia czaszkowo-krzyżowa</h2>
+        <div class="svc-layout reveal">
+
+          <!-- Left: specialist sidebar -->
+          <aside class="svc-aside">
+            <div class="svc-icon svc-icon--fizjo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="2" width="7" height="4" rx="1.5"/><rect x="8.5" y="8" width="7" height="4" rx="1.5"/><rect x="8.5" y="14" width="7" height="4" rx="1.5"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="12" x2="12" y2="14"/><line x1="12" y1="18" x2="12" y2="21"/><path d="M10 21h4"/></svg>
+            </div>
+            <p class="svc-aside__label">Fizjoterapeuta</p>
+            <h2 id="fizjo-heading" class="svc-aside__title">Fizjoterapia i terapia czaszkowo-krzyżowa</h2>
+            <div class="svc-specialist-card svc-specialist-card--fizjo">
+              <div class="svc-specialist-card__name">Diana Podsiad</div>
+              <div class="svc-specialist-card__role">Terapeuta SI i terapii czaszkowo-krzyżowej</div>
+            </div>
+            <div class="svc-aside__actions">
+              <a href="/pages/contact.html" class="btn btn--primary">Umów wizytę</a>
+              <a href="/pages/team.html#diana" class="btn btn--ghost">O specjaliście</a>
+            </div>
+          </aside>
+
+          <!-- Right: service content -->
+          <div class="svc-content">
+            <p class="svc-lead">
+              Diana Podsiad – terapeuta Integracji Sensorycznej i terapii czaszkowo-krzyżowej metodą Upledgera – pracuje z dziećmi i dorosłymi w podejściu holistycznym, uwzględniając wpływ czynników emocjonalnych i psychicznych na ciało.
+            </p>
+
+            <div class="svc-block">
+              <h3 class="svc-block__title">Zakres usług</h3>
+              <ul class="svc-list">
+                <li>Terapia metodą czaszkowo-krzyżową (Cranio-Sacralna Upledgera) dla dzieci i dorosłych.</li>
+                <li>Integracja Sensoryczna – terapia dzieci z zaburzeniami przetwarzania sensorycznego.</li>
+                <li>Terapia dzieci z zaburzeniami wieku rozwojowego: asymetria, zaburzenia napięcia mięśniowego.</li>
+                <li>Terapia dzieci z zaburzeniami neurologicznymi oraz ze spektrum autyzmu.</li>
+                <li>Praca z dorosłymi – Uwolnienie SomatoEmocjonalne: traumy, trudne doświadczenia, lęk, depresja, bezsenność.</li>
+              </ul>
+            </div>
+
+            <div class="svc-callout">
+              <h3 class="svc-callout__title">Czym jest terapia Cranio-Sacralna?</h3>
+              <p class="svc-callout__text">
+                Nieinwazyjna metoda terapii manualnej opierająca się na bardzo delikatnym dotyku. Terapeuta pracuje z powięzią, kośćmi czaszki, oponą mózgową, rdzeniem kręgowym i płynem mózgowo-rdzeniowym, wspierając naturalne mechanizmy samouzdrawiania organizmu. Może być stosowana niezależnie od wieku i stanu pacjenta.
+              </p>
             </div>
           </div>
-          <p class="service-section__lead">
-            Diana Podsiad – terapeuta Integracji Sensorycznej i terapii czaszkowo-krzyżowej metodą Upledgera – pracuje z dziećmi i dorosłymi w podejściu holistycznym.
-          </p>
-        </div>
 
-        <div class="reveal reveal-delay-1">
-          <h3 style="margin-bottom:1rem;">Zakres usług</h3>
-          <ul class="spec-list">
-            <li>Terapia metodą czaszkowo-krzyżową (Cranio-Sacralna Upledgera) dla dzieci i dorosłych.</li>
-            <li>Integracja Sensoryczna – terapia dzieci z zaburzeniami przetwarzania sensorycznego.</li>
-            <li>Terapia dzieci z zaburzeniami wieku rozwojowego: asymetria, zaburzenia napięcia mięśniowego.</li>
-            <li>Terapia dzieci z zaburzeniami neurologicznymi oraz ze spektrum autyzmu.</li>
-            <li>Praca z dorosłymi – Uwolnienie SomatoEmocjonalne: traumy, trudne doświadczenia, lęk, depresja, bezsenność.</li>
-          </ul>
-
-          <div style="margin-top:1.75rem; padding:1.5rem; background:var(--surface); border-radius:var(--radius-lg); border:1px solid var(--neutral-200);">
-            <h3 style="margin-bottom:0.75rem; font-size:1rem;">Czym jest terapia Cranio-Sacralna?</h3>
-            <p style="font-size:var(--fs-sm); color:var(--muted); line-height:1.75; margin:0;">
-              Terapia czaszkowo-krzyżowa to nieinwazyjna metoda terapii manualnej opierająca się na bardzo delikatnym dotyku. Terapeuta pracuje z powięzią, kośćmi czaszki, oponą mózgową, rdzeniem kręgowym i płynem mózgowo-rdzeniowym, wspierając naturalne mechanizmy samouzdrawiania organizmu. Może być stosowana niezależnie od wieku i stanu pacjenta.
-            </p>
-          </div>
-        </div>
-
-        <div class="reveal reveal-delay-2" style="margin-top:2.5rem;">
-          <a href="/pages/team.html#diana" class="btn btn--ghost" style="margin-right:1rem;">O fizjoterapeucie</a>
-          <a href="/pages/contact.html" class="btn btn--primary">Umów konsultację</a>
         </div>
       </div>
     </section>
