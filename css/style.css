@@ -39,6 +39,7 @@ h4 { font-size: 1.125rem; font-weight: 600; }
 
 p { line-height: 1.75; color: var(--text); }
 
+
 /* ── LAYOUT ─────────────────────────────────────────────────── */
 .container {
   width: 100%;
@@ -66,7 +67,7 @@ p { line-height: 1.75; color: var(--text); }
 .section-header__title { margin-bottom: 1rem; }
 
 .section-header__lead {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
   color: var(--muted);
   font-size: var(--fs-lg);
@@ -381,6 +382,7 @@ p { line-height: 1.75; color: var(--text); }
 }
 
 .hero__image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
 
 /* ── FEATURES STRIP ─────────────────────────────────────────── */
 .features-strip {
@@ -1148,8 +1150,8 @@ p { line-height: 1.75; color: var(--text); }
 }
 
 .service-section__icon {
-  width: 56px;
-  height: 56px;
+  width: 75px;
+  height: 75px;
   border-radius: var(--radius-lg);
   background: var(--accent-200);
   display: flex;
