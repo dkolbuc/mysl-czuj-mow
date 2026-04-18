@@ -1,0 +1,105 @@
+/* css/variables.css
+   Semantic design tokens for "Gabinet Terapeutyczny Myśl czuj mów"
+*/
+
+/* --- Core brand colors --- */
+:root {
+  /* Brand */
+  --brand-navy: #293a4c;    /* główny granat z logo */
+  --brand-beige: #a98879;   /* główny beż */
+  --black: #000000;         /* tekst */
+  --white: #ffffff;         /* tło */
+
+  /* Semantic roles */
+  --bg: var(--white);
+  --surface: #fbf8f7;       /* delikatny beż jako tło kart */
+  --muted: #6b6b6b;
+  --accent: var(--brand-beige);
+  --accent-600: #8f6a5f;    /* ciemniejszy beż */
+  --accent-200: #f0e6e3;    /* jaśniejszy beż */
+
+  /* Neutral shades (for borders, subtle text) */
+  --neutral-100: #f6f6f6;
+  --neutral-200: #ececec;
+  --neutral-300: #dcdcdc;
+  --neutral-400: #bfbfbf;
+
+  /* Focus / interactive */
+  --focus-ring: rgba(41,58,76,0.12); /* subtle navy focus */
+
+  /* Elevation */
+  --shadow-1: 0 6px 18px rgba(41,58,76,0.04);
+  --shadow-2: 0 10px 30px rgba(41,58,76,0.06);
+
+  /* --- Typography --- */
+  --font-heading: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --font-size-base: 16px;
+  --line-height-base: 1.45;
+
+  /* Scale (modular) */
+  --fs-xs: 0.8125rem;  /* 13px */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-base: 1rem;     /* 16px */
+  --fs-lg: 1.125rem;   /* 18px */
+  --fs-xl: 1.375rem;   /* 22px */
+  --fs-xxl: 1.75rem;   /* 28px */
+
+  /* --- Layout tokens --- */
+  --container-width: 1280px;
+  --gap: 1rem;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+
+  /* Breakpoints (mobile-first) */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+
+  /* Misc */
+  --transition-fast: 150ms;
+  --transition-medium: 240ms;
+}
+
+/* Utility: high-contrast theme override (toggle .theme-high-contrast on <html>) */
+.theme-high-contrast {
+  --text: #000000;
+  --bg: #ffffff;
+  --accent: #293a4c;
+  --surface: #ffffff;
+}
+
+/* Accessibility helpers (semantic color aliases) */
+:root {
+  --text: var(--black);
+  --link: var(--brand-navy);
+  --error: #b00020;
+  --success: #2e7d32;
+}
+
+/* Small helper for generating beige variants (HSL fallback if needed) */
+/* Example usage: color: hsl(var(--beige-h) var(--beige-s) var(--beige-l)); */
+/* Not required — kept for future theming */
+:root {
+  --beige-h: 15;
+  --beige-s: 18%;
+  --beige-l-100: 96%;
+  --beige-l-200: 90%;
+  --beige-l-300: 82%;
+  --beige-l-400: 74%;
+}
+
+/* Dodatki do variables.css - nowoczesne stany i kontrasty */
+:root {
+  --glass-bg: rgba(255,255,255,0.6);
+  --glass-border: rgba(255,255,255,0.35);
+  --nav-bg: linear-gradient(180deg, rgba(169,136,121,0.08), rgba(169,136,121,0.03));
+  --footer-bg: var(--brand-navy);
+  --footer-text: #f6f8fb;
+  --accent-contrast: #ffffff;
+  --btn-elev: 0 12px 30px rgba(41,58,76,0.12);
+  --micro-duration: 180ms;
+  --shadow-soft: 0 8px 24px rgba(41,58,76,0.08);
+  --glass-blur: 8px;
+}

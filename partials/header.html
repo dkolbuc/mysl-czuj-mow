@@ -1,0 +1,67 @@
+<header class="site-header" role="banner" id="site-header">
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <div class="container header-inner">
+
+    <!-- Brand -->
+    <a class="brand" href="/index.html" aria-label="Gabinet Terapeutyczny Myśl Czuj Mów — strona główna">
+      <!-- LOGO -->
+      <img
+        src="/images/logo-gabinet-new.webp"
+        alt="Myśl Czuj Mów — Gabinet Terapeutyczny Kielce"
+        class="brand__logo"
+        width="200"
+        height="80"
+      />
+      <span class="brand__sub brand__sub--below">Gabinet Terapeutyczny, Kielce</span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Główne menu">
+      <ul class="nav-list">
+        <li><a href="/index.html" class="nav-link">Strona główna</a></li>
+        <li><a href="/pages/team.html" class="nav-link">Zespół</a></li>
+        <li><a href="/pages/services.html" class="nav-link">Usługi</a></li>
+        <li><a href="/pages/pricing.html" class="nav-link">Cennik</a></li>
+        <li><a href="/pages/patient-area.html" class="nav-link">Strefa Pacjenta</a></li>
+        <li><a href="/pages/location.html" class="nav-link">Lokalizacja</a></li>
+      </ul>
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <a href="/pages/contact.html" class="btn btn--primary">Umów wizytę</a>
+      <button
+        id="hamburgerBtn"
+        class="hamburger"
+        aria-label="Otwórz menu nawigacyjne"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+      >
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile nav drawer -->
+  <div
+    id="mobileNav"
+    class="mobile-nav"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Menu nawigacyjne"
+    aria-hidden="true"
+  >
+    <ul class="mobile-nav__list">
+      <li><a href="/index.html" class="nav-link">Strona główna</a></li>
+      <li><a href="/pages/team.html" class="nav-link">Zespół</a></li>
+      <li><a href="/pages/services.html" class="nav-link">Usługi</a></li>
+      <li><a href="/pages/pricing.html" class="nav-link">Cennik</a></li>
+      <li><a href="/pages/patient-area.html" class="nav-link">Strefa Pacjenta</a></li>
+      <li><a href="/pages/location.html" class="nav-link">Lokalizacja</a></li>
+    </ul>
+    <a href="/pages/contact.html" class="btn btn--primary mobile-nav__cta">Umów wizytę</a>
+  </div>
+</header>

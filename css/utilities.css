@@ -1,0 +1,101 @@
+/* ============================================================
+   utilities.css — Gabinet Terapeutyczny "Myśl Czuj Mów"
+   Helper classes
+   ============================================================ */
+
+/* Text alignment */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+/* Text colour */
+.text-navy   { color: var(--brand-navy) !important; }
+.text-accent { color: var(--accent) !important; }
+.text-muted  { color: var(--muted) !important; }
+.text-white  { color: #fff !important; }
+
+/* Font size */
+.text-sm   { font-size: var(--fs-sm); }
+.text-base { font-size: var(--fs-base); }
+.text-lg   { font-size: var(--fs-lg); }
+
+/* Font weight */
+.fw-400 { font-weight: 400; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+
+/* Display */
+.d-flex  { display: flex; }
+.d-grid  { display: grid; }
+.d-block { display: block; }
+.d-none  { display: none !important; }
+
+/* Flex helpers */
+.align-center    { align-items: center; }
+.align-start     { align-items: flex-start; }
+.justify-center  { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.flex-wrap       { flex-wrap: wrap; }
+.flex-col        { flex-direction: column; }
+.gap-xs  { gap: 0.5rem; }
+.gap-sm  { gap: 0.75rem; }
+.gap-md  { gap: 1rem; }
+.gap-lg  { gap: 1.5rem; }
+.gap-xl  { gap: 2rem; }
+
+/* Spacing */
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
+
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+/* Background */
+.bg-white   { background: #fff; }
+.bg-surface { background: var(--surface); }
+.bg-navy    { background: var(--brand-navy); }
+.bg-accent  { background: var(--accent); }
+
+/* Border radius */
+.rounded      { border-radius: var(--radius); }
+.rounded-lg   { border-radius: var(--radius-lg); }
+.rounded-full { border-radius: 9999px; }
+
+/* Width / max-width */
+.w-full      { width: 100%; }
+.max-w-sm    { max-width: 480px; }
+.max-w-md    { max-width: 640px; }
+.max-w-prose { max-width: 760px; }
+
+/* Shadow */
+.shadow-sm { box-shadow: var(--shadow-1); }
+.shadow-md { box-shadow: var(--shadow-2); }
+
+/* Border */
+.border     { border: 1px solid var(--neutral-200); }
+.border-top { border-top: 1px solid var(--neutral-200); }
+
+/* Overflow */
+.overflow-hidden { overflow: hidden; }
+
+/* Position */
+.relative { position: relative; }
+.absolute  { position: absolute; }
+
+/* Line height */
+.leading-relaxed { line-height: 1.75; }
+.leading-tight   { line-height: 1.2; }

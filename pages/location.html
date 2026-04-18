@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lokalizacja — Gabinet Myśl Czuj Mów</title>
+  <meta name="description" content="Gabinet Terapeutyczny Myśl Czuj Mów — ul. Karola Olszewskiego 6, 25-663 Kielce. I piętro, pok. 116. Budynek Przychodni Chemar. Dojazd i lokalizacja." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Leaflet CSS (free, no API key required) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/utilities.css" />
+</head>
+<body>
+  <div id="site-header-placeholder"></div>
+
+  <main id="main">
+
+    <!-- Page hero -->
+    <div class="page-hero">
+      <div class="container">
+        <nav class="page-hero__breadcrumbs" aria-label="Ścieżka nawigacji">
+          <a href="/index.html">Strona główna</a>
+          <span class="sep">›</span>
+          <span aria-current="page">Lokalizacja</span>
+        </nav>
+        <span class="page-hero__label">Jak do nas trafić</span>
+        <h1 class="page-hero__title">Lokalizacja</h1>
+        <p class="page-hero__lead">
+          Gabinet mieści się w Budynku Przychodni Chemar w Kielcach, na I piętrze.
+        </p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="location-grid">
+
+          <!-- Address card -->
+          <div class="reveal">
+            <div class="location-card">
+              <div class="location-address">
+                Budynek Przychodni Chemar<br>
+                ul. Karola Olszewskiego 6<br>
+                25-663 Kielce
+              </div>
+
+              <div class="location-details">
+                <div class="location-detail">
+                  <span class="location-detail__icon">🏢</span>
+                  <div class="location-detail__content">
+                    <span class="location-detail__label">Lokalizacja Gabinetu</span>
+                    <span class="location-detail__text">I piętro, pokój 116</span>
+                  </div>
+                </div>
+
+                <div class="location-detail">
+                  <span class="location-detail__icon">♿</span>
+                  <div class="location-detail__content">
+                    <span class="location-detail__label">Dostęp dla niepełnosprawnych</span>
+                    <span class="location-detail__text">Budynek wyposażony w podjazd dla wózków oraz windę</span>
+                  </div>
+                </div>
+
+                <div class="location-detail">
+                  <span class="location-detail__icon">🅿️</span>
+                  <div class="location-detail__content">
+                    <span class="location-detail__label">Parking</span>
+                    <span class="location-detail__text">Parking dostępny przy budynku przychodni</span>
+                  </div>
+                </div>
+
+                <div class="location-detail">
+                  <span class="location-detail__icon">📍</span>
+                  <div class="location-detail__content">
+                    <span class="location-detail__label">Google Maps</span>
+                    <a
+                      href="https://www.google.com/maps/search/ul.+Karola+Olszewskiego+6+Kielce"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="location-detail__text"
+                      style="color:var(--accent); font-weight:600;"
+                    >
+                      Otwórz w Google Maps →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:2rem;">
+                <a href="/pages/contact.html" class="btn btn--primary">Umów wizytę</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map column -->
+          <div class="reveal reveal-delay-1">
+
+            <!-- Interactive Leaflet map -->
+            <div
+              id="clinic-map"
+              class="map-container"
+              role="region"
+              aria-label="Mapa z lokalizacją gabinetu"
+            ></div>
+
+            <!-- Photo placeholders below map -->
+            <div style="display:flex; flex-direction:column; gap:1.5rem; margin-top:1.5rem;">
+              <div class="photo-placeholder" style="min-height:180px;">
+                Zdjęcie budynku Przychodni
+              </div>
+              <div class="photo-placeholder" style="min-height:180px;">
+                 Zdjęcie gabinetu terapeutycznego
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Directions note -->
+        <div style="max-width:680px; margin-top:3rem;" class="reveal reveal-delay-2">
+          <h2 style="font-size:1.25rem; margin-bottom:1rem;">Jak do nas dojechać?</h2>
+          <p style="color:var(--muted); font-size:var(--fs-sm); line-height:1.8;">
+            Gabinet Terapeutyczny „Myśl Czuj Mów" mieści się w Budynku Przychodni Chemar przy ul. Karola Olszewskiego 6 w Kielcach. Po wejściu do budynku należy udać się na I piętro (winda dostępna) i odszukać pokój 116.
+          </p>
+          <p style="color:var(--muted); font-size:var(--fs-sm); line-height:1.8; margin-top:0.75rem;">
+            W razie trudności z lokalizacją gabinetu prosimy o kontakt SMS z wybranym terapeutą.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-placeholder"></div>
+
+  <!-- Leaflet JS (free OpenStreetMap tiles, no API key) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script defer src="/js/include-partials.js"></script>
+  <script defer src="/js/utils.js"></script>
+  <script defer src="/js/app.js"></script>
+  <script defer src="/js/ui.js"></script>
+  <!-- Clinic map initialisation -->
+  <script src="/js/maps.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt — Gabinet Myśl Czuj Mów</title>
+  <meta name="description" content="Kontakt z Gabinetem Terapeutycznym Myśl Czuj Mów w Kielcach. Umawianie wizyt wyłącznie przez SMS. Numery telefonów do poszczególnych terapeutów." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/utilities.css" />
+</head>
+<body>
+  <div id="site-header-placeholder"></div>
+
+  <main id="main">
+
+    <!-- Page hero -->
+    <div class="page-hero">
+      <div class="container">
+        <nav class="page-hero__breadcrumbs" aria-label="Ścieżka nawigacji">
+          <a href="/index.html">Strona główna</a>
+          <span class="sep">›</span>
+          <span aria-current="page">Kontakt</span>
+        </nav>
+        <span class="page-hero__label">Kontakt</span>
+        <h1 class="page-hero__title">Umawianie i odwoływanie wizyt</h1>
+        <p class="page-hero__lead">
+          Uprzejmie prosimy o umawianie i odwoływanie wizyt <strong>wyłącznie przez SMS</strong> na numery poszczególnych terapeutów.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact section -->
+    <section class="section" id="book" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- SMS contact info -->
+          <div class="reveal">
+            <h2 class="contact-section-title" id="contact-heading">Numery kontaktowe</h2>
+            <div class="contact-people">
+
+              <div class="contact-person">
+                <span class="contact-person__name">Kinga Niewójt-Sasak</span>
+                <span class="contact-person__role">Psycholog</span>
+                <a href="sms:+48691360614" class="contact-person__phone">
+                  📱 691 360 614
+                </a>
+              </div>
+
+              <div class="contact-person">
+                <span class="contact-person__name">Diana Podsiad</span>
+                <span class="contact-person__role">Fizjoterapeuta</span>
+                <a href="sms:+48504969727" class="contact-person__phone">
+                  📱 504 969 727
+                </a>
+              </div>
+
+              <div class="contact-person">
+                <span class="contact-person__name">Renata Cuprych</span>
+                <span class="contact-person__role">Logopeda · Neurologopeda</span>
+                <a href="sms:+48530720862" class="contact-person__phone">
+                  📱 530 720 862
+                </a>
+              </div>
+
+            </div>
+
+            <div class="contact-note">
+              <strong>Ważne:</strong> Uprzejmie prosimy o umawianie i odwoływanie wizyt <strong>wyłącznie przez SMS</strong>. Z góry dziękujemy za dostosowanie się do powyższych wytycznych.
+            </div>
+
+            <div class="payment-info" style="margin-top:1.5rem;">
+              <strong>Formy płatności:</strong> gotówka lub przelew bankowy.
+            </div>
+
+            <div style="margin-top:1.75rem; padding:1.25rem 1.5rem; background:var(--surface); border-radius:var(--radius-lg); border:1px solid var(--neutral-200);">
+              <h3 style="font-size:1rem; margin-bottom:0.5rem;">📍 Lokalizacja</h3>
+              <p style="font-size:var(--fs-sm); color:var(--muted); margin:0; line-height:1.7;">
+                Budynek Przychodni Chemar<br>
+                ul. Karola Olszewskiego 6, 25-663 Kielce<br>
+                I piętro, pok. 116<br><br>
+                <a href="/pages/location.html" style="color:var(--accent); font-weight:600;">Jak dojechać →</a>
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Contact form -->
+          <div class="reveal reveal-delay-1">
+            <h2 class="contact-section-title">Formularz kontaktowy</h2>
+            <p style="font-size:var(--fs-sm); color:var(--muted); margin-bottom:1.75rem; line-height:1.65;">
+              Możesz również wysłać nam wiadomość przez formularz poniżej. Odpiszemy najszybciej jak to możliwe. Pamiętaj jednak, że wizyty są umawiane wyłącznie przez SMS.
+            </p>
+
+            <!-- Success message -->
+            <div id="formSuccess" class="form-success" role="alert" aria-live="polite">
+              <p class="form-success__title">✅ Wiadomość wysłana!</p>
+              <p class="form-success__text">Dziękujemy za kontakt. Odpiszemy wkrótce. Wizyty umawiamy przez SMS.</p>
+            </div>
+
+            <form id="contactForm" class="form" novalidate aria-label="Formularz kontaktowy">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="label" for="firstName">Imię <span class="required">*</span></label>
+                  <input class="input" id="firstName" name="firstName" type="text" autocomplete="given-name" required placeholder="Jan" />
+                </div>
+                <div class="form-group">
+                  <label class="label" for="lastName">Nazwisko <span class="required">*</span></label>
+                  <input class="input" id="lastName" name="lastName" type="text" autocomplete="family-name" required placeholder="Kowalski" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="label" for="email">Adres e-mail <span class="required">*</span></label>
+                  <input class="input" id="email" name="email" type="email" autocomplete="email" required placeholder="jan@przykład.pl" />
+                </div>
+                <div class="form-group">
+                  <label class="label" for="phone">Telefon <span style="font-weight:400;color:var(--muted);">(opcjonalnie)</span></label>
+                  <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="600 000 000" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="label" for="specialist">Specjalista</label>
+                <select class="select" id="specialist" name="specialist">
+                  <option value="">— wybierz specjalistę —</option>
+                  <option value="kinga">Kinga Niewójt-Sasak — Psycholog</option>
+                  <option value="diana">Diana Podsiad — Fizjoterapeuta</option>
+                  <option value="renata">Renata Cuprych — Logopeda / Neurologopeda</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="label" for="message">Wiadomość <span class="required">*</span></label>
+                <textarea class="textarea" id="message" name="message" required placeholder="Opisz krótko cel wizyty lub zadaj pytanie…"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-wrap">
+                  <input type="checkbox" name="rodo" required />
+                  <span class="checkbox-label">
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych przez Gabinet Terapeutyczny Myśl Czuj Mów w celu udzielenia odpowiedzi na moje zapytanie. Zapoznałem/am się z <a href="/pages/privacy-policy.html">Polityką Prywatności</a> i <a href="/pages/rodo-clause.html">Klauzulą RODO</a>. <span class="required">*</span>
+                  </span>
+                </label>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn--primary btn--lg btn--full">Wyślij wiadomość</button>
+              </div>
+
+              <p class="form-hint">Pola oznaczone <span style="color:var(--error);">*</span> są obowiązkowe. Dane przetwarzamy zgodnie z RODO. Wizyty są umawiane wyłącznie przez SMS.</p>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer-placeholder"></div>
+  <script defer src="/js/include-partials.js"></script>
+  <script defer src="/js/utils.js"></script>
+  <script defer src="/js/app.js"></script>
+  <script defer src="/js/ui.js"></script>
+  <script defer src="/js/forms.js"></script>
+</body>
+</html>
