@@ -98,9 +98,7 @@ p { line-height: 1.75; color: var(--text); }
 
 /* ── HEADER ─────────────────────────────────────────────────── */
 /*
-  STICKY NOTE: position:sticky on .site-header alone doesn't work because
-  its injected parent (#site-header-placeholder) is exactly the same height —
-  no scroll room. The fix is to make the placeholder itself sticky.
+  STICKY
 */
 #site-header-placeholder {
   position: sticky;
@@ -1291,7 +1289,7 @@ p { line-height: 1.75; color: var(--text); }
 /* ── BACK TO TOP ──────────────────────────────────────────────── */
 .back-to-top {
   position: fixed;
-  bottom: 1.75rem;
+  bottom: 8rem;
   right: 1.75rem;
   width: 46px;
   height: 46px;
@@ -1653,8 +1651,7 @@ body { animation: pageFadeIn 0.3s ease both; }
 
 
 /* ============================================================
-   SERVICES PAGE — complete visual redesign
-   New component classes: svc-* (no conflicts with existing)
+   SERVICES PAGE
    ============================================================ */
 
 /* ── Section shell ── */
@@ -1670,7 +1667,7 @@ body { animation: pageFadeIn 0.3s ease both; }
 .svc-section--fizjo { background: #fff; }
 
 /* Subtle top border accent per specialty */
-.svc-section--psych { border-top: 3px solid #ccdde8; }
+.svc-section--psych { border-top: 0px solid #ccdde8; }
 .svc-section--logo  { border-top: 3px solid #c8dac9; }
 .svc-section--fizjo { border-top: 3px solid var(--accent-200); }
 
@@ -1901,8 +1898,7 @@ body { animation: pageFadeIn 0.3s ease both; }
 }
 
 /* ============================================================
-   HOMEPAGE EXPANSIONS — about pillars, audience cards,
-   features strip icons, team spec badge
+   HOMEPAGE EXPANSIONS
    ============================================================ */
 
 /* ── Features strip: icon alignment ── */
@@ -2087,7 +2083,7 @@ body { animation: pageFadeIn 0.3s ease both; }
 }
 
 /* ============================================================
-   SERVICES PAGE — svc-list & svc-tags refinement
+   SERVICES PAGE refinement
    ============================================================ */
 
 /* ── Zakres usług: upgraded list rows ── */
@@ -2161,7 +2157,7 @@ body { animation: pageFadeIn 0.3s ease both; }
 
 /* ── svc-block title: more weight ── */
 .svc-block__title {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.14em;
   opacity: 1;
   color: var(--accent-600);
@@ -2172,7 +2168,6 @@ body { animation: pageFadeIn 0.3s ease both; }
 
 /* ============================================================
    MOBILE RESPONSIVE POLISH
-   Four targeted fixes: header, footer, card icons, features strip
    ============================================================ */
 
 /* ── 1. Header: shrink logo, hide redundant CTA, ensure breathing room ── */
