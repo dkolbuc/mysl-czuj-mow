@@ -86,20 +86,25 @@
 
   // ── Highlight active nav link ────────────────────────────────
   function setActiveNavLink() {
-    const path = window.location.pathname.replace(/\/$/, '') || '/';
+    // Use the resolved pathname so it works on GitHub Pages sub-paths too
+    const currentPath = window.location.pathname.replace(/\/$/, '');
 
     document.querySelectorAll('.nav-link').forEach(link => {
-      const href = (link.getAttribute('href') || '').replace(/\/$/, '');
-      if (!href) return;
+      try {
+        // link.href is the fully resolved absolute URL — use its pathname
+        const linkPath = new URL(link.href).pathname.replace(/\/$/, '');
 
-      const isHome = (href === '/index.html' || href === '') &&
-                     (path === '/' || path === '/index.html' || path === '');
-      const isMatch = !isHome && href !== '/index.html' && href !== '' && path.endsWith(href.replace(/^\//, ''));
+        const currentIsHome = /\/index\.html$/.test(currentPath) || currentPath === '';
+        const linkIsHome    = /\/index\.html$/.test(linkPath)    || linkPath === '';
 
-      if (isHome || isMatch) {
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
-      }
+        const isHome  = currentIsHome && linkIsHome;
+        const isMatch = !linkIsHome && currentPath === linkPath;
+
+        if (isHome || isMatch) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        }
+      } catch (_) {}
     });
   }
 
