@@ -2320,3 +2320,134 @@ body { animation: pageFadeIn 0.3s ease both; }
   opacity: 0.75;
   color: var(--brand-beige);
 }
+
+/* ============================================================
+   FAQ SECTION
+   ============================================================ */
+
+.faq-section { background: var(--surface); }
+
+/* Two-column grid on desktop */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .faq-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2.5rem;
+    align-items: start;
+  }
+}
+
+.faq-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual item */
+.faq-item {
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--neutral-200);
+}
+
+/* On desktop, second column first child should also have a top border */
+@media (min-width: 900px) {
+  .faq-col:last-child .faq-item:first-child {
+    border-top: 1px solid var(--neutral-200);
+  }
+}
+
+/* Highlighted item (cranio-sacral) */
+.faq-item--highlight .faq-question {
+  color: var(--accent-600);
+}
+
+/* Question button */
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--brand-navy);
+  text-align: left;
+  line-height: 1.4;
+  transition: color var(--transition-fast) ease;
+}
+
+.faq-question:hover {
+  color: var(--accent);
+}
+
+.faq-question[aria-expanded="true"] {
+  color: var(--accent);
+}
+
+/* Chevron icon */
+.faq-chevron {
+  flex-shrink: 0;
+  color: var(--muted);
+  transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+/* Answer panel — collapsed by default, animated open */
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease, padding 0.25s ease;
+}
+
+.faq-answer.open {
+  max-height: 600px; /* large enough for any answer */
+}
+
+.faq-answer p,
+.faq-answer ul {
+  padding-bottom: 1.25rem;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.faq-answer p + p {
+  padding-top: 0;
+  margin-top: -0.5rem;
+}
+
+.faq-answer ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.faq-answer ul li {
+  margin-bottom: 0.35rem;
+}
+
+.faq-answer a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.faq-answer a:hover {
+  color: var(--accent-600);
+}
