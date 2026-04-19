@@ -1923,10 +1923,10 @@ body { animation: pageFadeIn 0.3s ease both; }
   justify-content: center;
 }
 /* Enforce icon size via CSS so HTML attributes are just fallback */
-.service-card__icon svg { width: 38px; height: 38px; }
-.svc-icon svg            { width: 32px; height: 32px; }
-.audience-card__icon svg { width: 30px; height: 30px; }
-.team-card__spec-icon svg { width: 20px; height: 20px; }
+.service-card__icon svg  { width: 44px; height: 44px; }
+.svc-icon svg            { width: 36px; height: 36px; }
+.audience-card__icon svg { width: 34px; height: 34px; }
+.team-card__spec-icon svg { width: 22px; height: 22px; }
 
 /* ── About section: 2-col grid ── */
 .about-grid {
@@ -2078,9 +2078,9 @@ body { animation: pageFadeIn 0.3s ease both; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
   background: var(--accent-200);
   color: var(--accent-600);
   margin-bottom: 0.6rem;
