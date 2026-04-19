@@ -1913,7 +1913,7 @@ body { animation: pageFadeIn 0.3s ease both; }
 }
 .features-strip__item svg {
   flex-shrink: 0;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* ── Service card: svg icon (replaces emoji div) ── */
@@ -1922,6 +1922,11 @@ body { animation: pageFadeIn 0.3s ease both; }
   align-items: center;
   justify-content: center;
 }
+/* Enforce icon size via CSS so HTML attributes are just fallback */
+.service-card__icon svg { width: 38px; height: 38px; }
+.svc-icon svg            { width: 32px; height: 32px; }
+.audience-card__icon svg { width: 30px; height: 30px; }
+.team-card__spec-icon svg { width: 20px; height: 20px; }
 
 /* ── About section: 2-col grid ── */
 .about-grid {
@@ -2068,17 +2073,17 @@ body { animation: pageFadeIn 0.3s ease both; }
   color: var(--accent-600);
 }
 
-/* ── Team card: small specialty icon badge ── */
+/* ── Team card: specialty icon badge ── */
 .team-card__spec-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   background: var(--accent-200);
   color: var(--accent-600);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
 }
 
 /* ============================================================

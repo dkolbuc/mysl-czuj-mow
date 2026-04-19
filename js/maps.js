@@ -4,9 +4,9 @@
 (function () {
   'use strict';
 
-  // Coordinates for ul. Karola Olszewskiego 6, Kielce
-  var LAT  = 50.8724;
-  var LNG  = 20.6432;
+  // Coordinates for ul. Karola Olszewskiego 6, Kielce (Przychodnia Chemar)
+  var LAT  = 50.8937325;
+  var LNG  = 20.6218513;
   var ZOOM = 16;
 
   function initMap() {
