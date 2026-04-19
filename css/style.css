@@ -2327,26 +2327,13 @@ body { animation: pageFadeIn 0.3s ease both; }
 
 .faq-section { background: var(--surface); }
 
-/* Two-column grid on desktop */
+/* Single column list */
 .faq-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-@media (min-width: 900px) {
-  .faq-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 0 2.5rem;
-    align-items: start;
-  }
+  display: block;
 }
 
 .faq-col {
-  display: flex;
-  flex-direction: column;
+  display: contents;
 }
 
 /* Individual item */
@@ -2356,13 +2343,6 @@ body { animation: pageFadeIn 0.3s ease both; }
 
 .faq-item:first-child {
   border-top: 1px solid var(--neutral-200);
-}
-
-/* On desktop, second column first child should also have a top border */
-@media (min-width: 900px) {
-  .faq-col:last-child .faq-item:first-child {
-    border-top: 1px solid var(--neutral-200);
-  }
 }
 
 /* Highlighted item (cranio-sacral) */
