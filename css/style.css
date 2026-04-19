@@ -2345,6 +2345,11 @@ body { animation: pageFadeIn 0.3s ease both; }
   border-top: 1px solid var(--neutral-200);
 }
 
+/* Second column's first item already has a border-bottom from the item above it */
+.faq-col + .faq-col .faq-item:first-child {
+  border-top: none;
+}
+
 /* Highlighted item (cranio-sacral) */
 .faq-item--highlight .faq-question {
   color: var(--accent-600);
