@@ -3,7 +3,6 @@
   'use strict';
 
   // Compute the relative path from the current page to the site root.
-  // Pages under /pages/ need '../', everything else (root) needs './'
   function getSiteRoot() {
     return window.location.pathname.includes('/pages/') ? '../' : './';
   }

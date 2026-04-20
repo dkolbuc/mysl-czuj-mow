@@ -1,6 +1,4 @@
 // maps.js — Leaflet map for the clinic location page
-// Free OpenStreetMap tiles — no API key required.
-// ul. Karola Olszewskiego 6, 25-663 Kielce (Przychodnia Chemar)
 (function () {
   'use strict';
 
