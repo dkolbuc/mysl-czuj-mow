@@ -130,7 +130,7 @@
     render();
     lightbox.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
-    lbClose.focus();
+    lbClose.focus({ preventScroll: true });
   }
 
   function close() {
