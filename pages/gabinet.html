@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gabinet — Myśl Czuj Mów, Kielce</title>
+  <meta name="description" content="Poznaj nasz gabinet terapeutyczny w Kielcach — przyjazna, spokojna przestrzeń dla dzieci, młodzieży i dorosłych." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/utilities.css" />
+</head>
+<body>
+  <div id="site-header-placeholder"></div>
+
+  <main id="main">
+
+    <!-- Page hero -->
+    <div class="page-hero">
+      <div class="container">
+        <nav class="page-hero__breadcrumbs" aria-label="Ścieżka nawigacji">
+          <a href="../index.html">Strona główna</a>
+          <span class="sep">›</span>
+          <span aria-current="page">Gabinet</span>
+        </nav>
+        <span class="page-hero__label">Nasze miejsce</span>
+        <h1 class="page-hero__title">Gabinet Terapeutyczny</h1>
+        <p class="page-hero__lead">
+          Przyjazna, bezpieczna przestrzeń stworzona z myślą o komforcie dzieci, młodzieży i dorosłych.
+          Zapraszamy do zajrzenia do naszego gabinetu w Kielcach.
+        </p>
+      </div>
+    </div>
+
+    <!-- Intro + Gallery -->
+    <section class="section">
+      <div class="container">
+
+        <p class="gabinet-intro reveal">
+          Nasz gabinet mieści się w samym sercu Kielc. Zadbaliśmy o to, by przestrzeń była ciepła i spokojna
+          — zarówno dla najmłodszych, jak i dorosłych pacjentów. Każde pomieszczenie urządzone jest tak,
+          aby sprzyjało otwartości i poczuciu bezpieczeństwa podczas terapii.
+        </p>
+
+        <!-- ============================================================
+             GALERIA ZDJĘĆ
+             Aby dodać zdjęcie: skopiuj blok <div class="gallery-item">
+             i podaj ścieżkę do pliku w atrybucie src.
+             Zdjęcia umieszczaj w folderze: images/gabinet/
+             Obsługiwane formaty: .jpg .jpeg .webp .png
+             ============================================================ -->
+        <div class="gallery" role="list" aria-label="Galeria zdjęć gabinetu" id="gallery">
+
+          <div class="gallery-item" role="listitem">
+            <img src="../images/gabinet/01.jpg" alt="Poczekalnia gabinetu" loading="lazy" />
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="../images/gabinet/02.jpg" alt="Gabinet terapeutyczny" loading="lazy" />
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="../images/gabinet/03.jpg" alt="Kącik dla dzieci" loading="lazy" />
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="../images/gabinet/04.jpg" alt="Recepcja" loading="lazy" />
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="../images/gabinet/05.jpg" alt="Gabinet psychologa" loading="lazy" />
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="../images/gabinet/06.jpg" alt="Sala terapeutyczna" loading="lazy" />
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="../images/gabinet/07.jpg" alt="Wejście do gabinetu" loading="lazy" />
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="../images/gabinet/08.jpg" alt="Wyposażenie gabinetu" loading="lazy" />
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="../images/gabinet/09.jpg" alt="Przestrzeń terapeutyczna" loading="lazy" />
+          </div>
+
+        </div><!-- /.gallery -->
+
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__inner reveal">
+          <span class="cta-band__label">Zapraszamy</span>
+          <h2 class="cta-band__title">Zarezerwuj wizytę w gabinecie</h2>
+          <p class="cta-band__text">Skontaktuj się z nami, żeby umówić pierwszą wizytę lub dowiedzieć się więcej o naszej ofercie.</p>
+          <div class="cta-band__actions">
+            <a href="contact.html" class="btn btn--white btn--lg">Umów wizytę</a>
+            <a href="location.html" class="btn btn--outline-white btn--lg">Jak dojechać?</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie" hidden>
+    <div class="lightbox__backdrop"></div>
+    <button class="lightbox__close" aria-label="Zamknij podgląd">✕</button>
+    <button class="lightbox__arrow lightbox__arrow--prev" aria-label="Poprzednie zdjęcie">&#8249;</button>
+    <button class="lightbox__arrow lightbox__arrow--next" aria-label="Następne zdjęcie">&#8250;</button>
+    <div class="lightbox__stage">
+      <img class="lightbox__img" src="" alt="" />
+    </div>
+    <p class="lightbox__counter"></p>
+  </div>
+
+  <div id="site-footer-placeholder"></div>
+
+  <script defer src="../js/include-partials.js"></script>
+  <script defer src="../js/utils.js"></script>
+  <script defer src="../js/app.js"></script>
+  <script defer src="../js/ui.js"></script>
+  <script defer src="../js/gallery.js"></script>
+</body>
+</html>
