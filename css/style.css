@@ -2569,10 +2569,11 @@ body { animation: pageFadeIn 0.3s ease both; }
   position: absolute;
   inset: 3.5rem 2.5rem;
   z-index: 1;
-  overflow: hidden;
 }
 
 .lightbox__img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
