@@ -2553,9 +2553,6 @@ body { animation: pageFadeIn 0.3s ease both; }
   position: fixed;
   inset: 0;
   z-index: 9000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .lightbox[hidden] { display: none; }
@@ -2569,10 +2566,10 @@ body { animation: pageFadeIn 0.3s ease both; }
 }
 
 .lightbox__stage {
-  position: relative;
+  position: absolute;
+  inset: 3.5rem 2.5rem;
   z-index: 1;
-  width: calc(100vw - 5rem);
-  height: calc(100vh - 7rem);
+  overflow: hidden;
 }
 
 .lightbox__img {
