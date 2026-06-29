@@ -740,8 +740,8 @@ p { line-height: 1.75; color: var(--text); }
 }
 
 .contact-photo-strip__side {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 0.75rem;
 }
 
@@ -751,6 +751,7 @@ p { line-height: 1.75; color: var(--text); }
   object-fit: cover;
   border-radius: var(--radius-lg);
   display: block;
+  flex-shrink: 0;
 }
 
 .contact-grid {
@@ -1394,8 +1395,7 @@ p { line-height: 1.75; color: var(--text); }
   .contact-grid { grid-template-columns: 1fr 1fr; }
   .contact-photo-strip { grid-template-columns: 1.6fr 1fr; }
   .contact-photo-strip__main { height: 280px; }
-  .contact-photo-strip__side { height: 280px; }
-  .contact-photo-strip__side img { height: calc(50% - 0.375rem); }
+  .contact-photo-strip__side img { height: 134px; }
   .location-grid { grid-template-columns: 1fr 1fr; }
 
   .team-profile__grid { grid-template-columns: 240px 1fr; gap: 2.5rem; }
