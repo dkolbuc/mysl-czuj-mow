@@ -109,53 +109,52 @@
 
   initGallery();
 
-  // ── Lightbox ──────────────────────────────────────────────────
+  // ── Lightbox — native <dialog> ────────────────────────────────
   const lbImg     = lightbox.querySelector('.lightbox__img');
   const lbClose   = lightbox.querySelector('.lightbox__close');
   const lbPrev    = lightbox.querySelector('.lightbox__arrow--prev');
   const lbNext    = lightbox.querySelector('.lightbox__arrow--next');
   const lbCounter = lightbox.querySelector('.lightbox__counter');
-  const backdrop  = lightbox.querySelector('.lightbox__backdrop');
 
-  let items   = [];
-  let current = 0;
+  let lbItems   = [];
+  let lbCurrent = 0;
 
   function getImgs() {
     return Array.from(gallery.querySelectorAll('.gallery-item img'));
   }
 
-  function open(index) {
-    items   = getImgs();
-    current = Math.max(0, Math.min(index, items.length - 1));
-    render();
-    lightbox.removeAttribute('hidden');
+  function lbOpen(index) {
+    lbItems   = getImgs();
+    lbCurrent = Math.max(0, Math.min(index, lbItems.length - 1));
+    lbRender();
+    lightbox.showModal();
     document.body.style.overflow = 'hidden';
     lbClose.focus({ preventScroll: true });
   }
 
-  function close() {
-    lightbox.setAttribute('hidden', '');
+  function lbClose_fn() {
+    lightbox.close();
     document.body.style.overflow = '';
   }
 
-  function render() {
-    const img = items[current];
+  function lbRender() {
+    const img = lbItems[lbCurrent];
     lbImg.src = img.src;
     lbImg.alt = img.alt;
-    lbCounter.textContent = (current + 1) + ' / ' + items.length;
-    lbPrev.hidden = items.length <= 1;
-    lbNext.hidden = items.length <= 1;
+    lbCounter.textContent = (lbCurrent + 1) + ' / ' + lbItems.length;
+    lbPrev.hidden = lbItems.length <= 1;
+    lbNext.hidden = lbItems.length <= 1;
   }
 
-  function prev() { current = (current - 1 + items.length) % items.length; render(); }
-  function next() { current = (current + 1)                % items.length; render(); }
+  function lbPrev_fn() { lbCurrent = (lbCurrent - 1 + lbItems.length) % lbItems.length; lbRender(); }
+  function lbNext_fn() { lbCurrent = (lbCurrent + 1)                   % lbItems.length; lbRender(); }
 
   gallery.addEventListener('click', function (e) {
     const item = e.target.closest('.gallery-item');
     if (!item) return;
-    const img   = item.querySelector('img');
-    if (!img)   return;
-    open(getImgs().indexOf(img));
+    const img = item.querySelector('img');
+    if (!img)  return;
+    lbOpen(getImgs().indexOf(img));
   });
 
   // Keyboard a11y on gallery items
@@ -166,20 +165,28 @@
       if (e.key !== 'Enter' && e.key !== ' ') return;
       e.preventDefault();
       const img = item.querySelector('img');
-      open(getImgs().indexOf(img));
+      lbOpen(getImgs().indexOf(img));
     });
   });
 
-  lbClose.addEventListener('click', close);
-  backdrop.addEventListener('click', close);
-  lbPrev.addEventListener('click', prev);
-  lbNext.addEventListener('click', next);
+  lbClose.addEventListener('click', lbClose_fn);
+  lbPrev.addEventListener('click', lbPrev_fn);
+  lbNext.addEventListener('click', lbNext_fn);
 
-  document.addEventListener('keydown', function (e) {
-    if (lightbox.hasAttribute('hidden')) return;
-    if (e.key === 'Escape')     close();
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); prev(); }
-    if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+  // Click on ::backdrop closes dialog (click lands on <dialog> element itself)
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) lbClose_fn();
+  });
+
+  // native <dialog> fires 'cancel' on Escape key — sync body overflow
+  lightbox.addEventListener('cancel', function () {
+    document.body.style.overflow = '';
+  });
+
+  // Arrow keys for navigation
+  lightbox.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); lbPrev_fn(); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); lbNext_fn(); }
   });
 
   // Touch swipe in lightbox
@@ -189,6 +196,6 @@
   }, { passive: true });
   lightbox.addEventListener('touchend', function (e) {
     const dx = e.changedTouches[0].clientX - touchX;
-    if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
+    if (Math.abs(dx) > 50) { dx < 0 ? lbNext_fn() : lbPrev_fn(); }
   }, { passive: true });
 })();
