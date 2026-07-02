@@ -1385,8 +1385,6 @@ p { line-height: 1.75; color: var(--text); }
 
 /* ── TABLET (768px–1023px) ────────────────────────────────── */
 @media (min-width: 768px) {
-  .main-nav { display: flex; }
-  .hamburger { display: none; }
   .brand__sub { display: block; }
 
   .hero__inner { grid-template-columns: 1fr 340px; gap: 2.5rem; }
@@ -1405,6 +1403,12 @@ p { line-height: 1.75; color: var(--text); }
 
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
+}
+
+/* ── NAV SWITCH: drawer → desktop nav (above iPad Pro landscape) */
+@media (min-width: 1100px) {
+  .main-nav { display: flex; }
+  .hamburger { display: none; }
 }
 
 /* ── DESKTOP (1024px+) ────────────────────────────────────── */
