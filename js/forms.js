@@ -67,14 +67,23 @@
     const btn = form.querySelector('[type="submit"]');
     if (btn) { btn.disabled = true; btn.textContent = 'Wysyłanie…'; }
 
-    // Simulate async submission (no backend — SMS contact is primary channel)
-    setTimeout(() => {
-      form.style.display = 'none';
-      if (successBox) {
-        successBox.classList.add('visible');
-        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }, 900);
+    fetch('https://formspree.io/f/xwvdalkg', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(res => {
+        if (!res.ok) throw new Error();
+        form.style.display = 'none';
+        if (successBox) {
+          successBox.classList.add('visible');
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      })
+      .catch(() => {
+        if (btn) { btn.disabled = false; btn.textContent = 'Wyślij wiadomość'; }
+        alert('Wystąpił błąd podczas wysyłania. Spróbuj ponownie lub skontaktuj się przez SMS.');
+      });
   }
 
   window.addEventListener('partials:loaded', initContactForm);
