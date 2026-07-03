@@ -179,6 +179,30 @@ p { line-height: 1.75; color: var(--text); }
 /* Header actions */
 .header-actions { display: flex; align-items: center; gap: 0.75rem; }
 
+/* Header social icons */
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header-social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--brand-navy);
+  transition: color 0.2s, background 0.2s;
+}
+
+.header-social__link:hover,
+.header-social__link:focus-visible {
+  color: var(--accent);
+  background: rgba(169, 136, 121, 0.1);
+}
+
 /* Hamburger */
 .hamburger {
   display: flex;
@@ -1107,6 +1131,28 @@ p { line-height: 1.75; color: var(--text); }
   line-height: 1.65;
   margin-top: 1rem;
   max-width: 260px;
+}
+
+/* Footer social links */
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.footer-social__link {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-social__link:hover,
+.footer-social__link:focus-visible {
+  color: #fff;
 }
 
 .footer-col__title {
