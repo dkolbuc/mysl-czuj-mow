@@ -1155,6 +1155,10 @@ p { line-height: 1.75; color: var(--text); }
   color: #fff;
 }
 
+.footer-col {
+  min-width: 0;
+}
+
 .footer-col__title {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -1171,6 +1175,7 @@ p { line-height: 1.75; color: var(--text); }
   font-size: var(--fs-sm);
   color: rgba(255, 255, 255, 0.72);
   transition: color var(--transition-fast) ease;
+  word-break: break-word;
 }
 
 .footer-links a:hover { color: var(--brand-beige); }

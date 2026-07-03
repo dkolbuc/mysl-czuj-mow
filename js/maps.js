@@ -54,7 +54,7 @@
             'I pi\u0119tro, pok. 116<br>' +
             '25-663 Kielce' +
           '</address>' +
-          '<a class="map-popup__link" href="https://www.google.com/maps/search/ul.+Karola+Olszewskiego+6+Kielce" target="_blank" rel="noopener">Otw\u00f3rz w Google Maps \u2192</a>' +
+          '<a class="map-popup__link" href="https://www.google.com/maps/place/Gabinet+Terapeutyczny+My%C5%9Bl+Czuj+M%C3%B3w/@50.8905874,20.6182778,17z/data=!3m1!4b1!4m6!3m5!1s0x47182706835f6915:0x220a167d04417ac5!8m2!3d50.8905874!4d20.6208527!16s%2Fg%2F11z00_9m6b?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Otw\u00f3rz w Google Maps \u2192</a>' +
         '</div>',
         { maxWidth: 240 }
       )
