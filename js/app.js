@@ -17,6 +17,14 @@
     const nav = document.getElementById('mobileNav');
     if (!btn || !nav) return;
 
+    function syncDrawerTop() {
+      const placeholder = document.getElementById('site-header-placeholder');
+      if (placeholder) nav.style.top = placeholder.offsetHeight + 'px';
+    }
+
+    syncDrawerTop();
+    window.addEventListener('resize', syncDrawerTop, { passive: true });
+
     function openNav() {
       nav.classList.add('open');
       nav.setAttribute('aria-hidden', 'false');

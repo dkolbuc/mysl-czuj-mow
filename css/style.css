@@ -210,7 +210,7 @@ p { line-height: 1.75; color: var(--text); }
 /* Mobile drawer */
 .mobile-nav {
   position: fixed;
-  top: 69px;
+  top: 0;
   left: 0;
   right: 0;
   background: #fff;
