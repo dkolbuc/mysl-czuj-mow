@@ -50,7 +50,7 @@
           '<strong class="map-popup__name">Myśl \u00b7 Czuj \u00b7 M\u00f3w</strong>' +
           '<span class="map-popup__type">Gabinet Terapeutyczny</span>' +
           '<address class="map-popup__address">' +
-            'ul. Karola Olszewskiego 6<br>' +
+            'ul. Karola Olszewskiego 2<br>' +
             'I pi\u0119tro, pok. 116<br>' +
             '25-663 Kielce' +
           '</address>' +
