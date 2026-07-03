@@ -1,0 +1,21 @@
+# ============================================================
+#  Myśl Czuj Mów — konfiguracja Apache
+# ============================================================
+
+# ── Przekierowania ze starej strony WordPress ────────────────
+# 301 = trwałe przekierowanie (Google aktualizuje indeks)
+
+Redirect 301 /services/   /pages/services.html
+Redirect 301 /kontakt/    /pages/contact.html
+Redirect 301 /o-nas/      /pages/team.html
+
+# ── Kodowanie i bezpieczeństwo ───────────────────────────────
+AddDefaultCharset UTF-8
+
+# Ukryj listę plików w folderach
+Options -Indexes
+
+# Wyłącz wyświetlanie pliku .htaccess
+<Files ".htaccess">
+  Require all denied
+</Files>
